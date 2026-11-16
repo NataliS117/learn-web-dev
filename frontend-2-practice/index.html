@@ -3,12 +3,295 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Выбор даты и времени</title>
+    <meta
+      name="description"
+      content="Салон красоты «Лотос» — онлайн-запись. Выберите дату и время визита к мастеру."
+    />
+    <title>Выбор даты и времени — салон красоты «Лотос»</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="body">
     <div class="page">
-      <!-- Перенесите вашу верстку. Удалите статичные данные. Подключите скрипт -->
+      <header class="site-header">
+        <div class="site-header__inner container">
+          <a class="logo" href="#" aria-label="Салон красоты Лотос — на главную">
+            <span class="logo__mark" aria-hidden="true">Л</span>
+            <span class="logo__text">
+              <span class="logo__name">Лотос</span>
+              <span class="logo__caption">салон красоты</span>
+            </span>
+          </a>
+
+          <nav class="site-nav" aria-label="Основная навигация">
+            <a class="site-nav__link" href="#">Услуги</a>
+            <a class="site-nav__link" href="#">Мастера</a>
+            <a class="site-nav__link" href="#">Отзывы</a>
+            <a class="site-nav__link" href="#">Контакты</a>
+          </nav>
+
+          <div class="site-header__actions">
+            <a class="site-header__phone" href="tel:+74951204567">+7 (495) 120-45-67</a>
+            <button class="button button--ghost site-header__login" type="button">Войти</button>
+          </div>
+        </div>
+      </header>
+
+      <main class="booking">
+        <div class="container">
+          <div class="page-topline">
+            <nav class="breadcrumbs" aria-label="Хлебные крошки">
+              <a class="breadcrumbs__link" href="#">Главная</a>
+              <span class="breadcrumbs__separator" aria-hidden="true">/</span>
+              <a class="breadcrumbs__link" href="#">Онлайн-запись</a>
+              <span class="breadcrumbs__separator" aria-hidden="true">/</span>
+              <span class="breadcrumbs__current" aria-current="page">Дата и время</span>
+            </nav>
+            <a class="page-back" href="#">← Назад к услугам</a>
+          </div>
+
+          <section class="booking__intro" aria-labelledby="booking-title">
+            <div class="booking__heading">
+              <p class="booking__eyebrow">Онлайн-запись в салон «Лотос»</p>
+              <h1 class="booking__title" id="booking-title">Выбор даты и времени</h1>
+              <p class="booking__subtitle">
+                Осталось выбрать удобный день и время — мы напомним о визите за сутки.
+              </p>
+            </div>
+            <div class="booking__meta">
+              <span class="booking__meta-label">Мастер</span>
+              <span class="booking__meta-value">Алина Соколова</span>
+              <span class="booking__meta-divider" aria-hidden="true"></span>
+              <span class="booking__meta-label">Услуга</span>
+              <span class="booking__meta-value">Маникюр с покрытием</span>
+            </div>
+          </section>
+
+          <section class="progress" aria-label="Прогресс онлайн-записи">
+            <div class="progress__head">
+              <p class="progress__label">Запись на услугу</p>
+              <p class="progress__value">Шаг 4 из 6</p>
+            </div>
+            <ol class="steps">
+              <li class="steps__item steps__item--done">
+                <span class="steps__num">01</span>
+                <span class="steps__name">Старт</span>
+                <span class="steps__bar"></span>
+              </li>
+              <li class="steps__item steps__item--done">
+                <span class="steps__num">02</span>
+                <span class="steps__name">Мастер</span>
+                <span class="steps__bar"></span>
+              </li>
+              <li class="steps__item steps__item--done">
+                <span class="steps__num">03</span>
+                <span class="steps__name">Услуга</span>
+                <span class="steps__bar"></span>
+              </li>
+              <li class="steps__item steps__item--active" aria-current="step">
+                <span class="steps__num">04</span>
+                <span class="steps__name">Дата и время</span>
+                <span class="steps__bar"></span>
+              </li>
+              <li class="steps__item">
+                <span class="steps__num">05</span>
+                <span class="steps__name">Контакты</span>
+                <span class="steps__bar"></span>
+              </li>
+              <li class="steps__item">
+                <span class="steps__num">06</span>
+                <span class="steps__name">Готово</span>
+                <span class="steps__bar"></span>
+              </li>
+            </ol>
+          </section>
+
+          <div class="booking__grid">
+            <section class="card calendar-card" aria-labelledby="calendar-title">
+              <div class="card__head">
+                <div class="card__head-text">
+                  <p class="card__eyebrow">Шаг 4 · Дата визита</p>
+                  <h2 class="card__title" id="calendar-title">Выберите день</h2>
+                </div>
+
+                <div class="calendar-nav" aria-label="Переключение месяцев">
+                  <button
+                    class="calendar-nav__button"
+                    id="prev-month"
+                    type="button"
+                    aria-label="Предыдущий месяц"
+                  >
+                    <span class="calendar-nav__icon" aria-hidden="true">‹</span>
+                  </button>
+                  <p class="calendar-nav__label" id="month-label" aria-live="polite">Октябрь 2026</p>
+                  <button
+                    class="calendar-nav__button"
+                    id="next-month"
+                    type="button"
+                    aria-label="Следующий месяц"
+                  >
+                    <span class="calendar-nav__icon" aria-hidden="true">›</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="calendar">
+                <div class="calendar__weekdays" aria-hidden="true">
+                  <span class="calendar__weekday">Пн</span>
+                  <span class="calendar__weekday">Вт</span>
+                  <span class="calendar__weekday">Ср</span>
+                  <span class="calendar__weekday">Чт</span>
+                  <span class="calendar__weekday">Пт</span>
+                  <span class="calendar__weekday">Сб</span>
+                  <span class="calendar__weekday">Вс</span>
+                </div>
+
+                <div
+                  class="calendar__grid"
+                  id="calendar-grid"
+                  role="group"
+                  aria-label="Календарь"
+                ></div>
+              </div>
+
+              <ul class="calendar-legend" aria-label="Обозначения календаря">
+                <li class="calendar-legend__item">
+                  <span class="calendar-legend__dot calendar-legend__dot--selected" aria-hidden="true"></span>
+                  Выбранная дата
+                </li>
+                <li class="calendar-legend__item">
+                  <span class="calendar-legend__dot calendar-legend__dot--available" aria-hidden="true"></span>
+                  Доступно для записи
+                </li>
+                <li class="calendar-legend__item">
+                  <span class="calendar-legend__dot calendar-legend__dot--past" aria-hidden="true"></span>
+                  Недоступно
+                </li>
+              </ul>
+
+              <aside class="master-summary" aria-label="Параметры записи">
+                <img
+                  class="master-summary__photo"
+                  src="images/master-alina.jpg"
+                  alt="Алина Соколова, мастер маникюра"
+                  width="56"
+                  height="56"
+                />
+                <div class="master-summary__text">
+                  <p class="master-summary__name">Алина Соколова</p>
+                  <p class="master-summary__meta">Мастер маникюра · стаж 7 лет · рейтинг 4,9</p>
+                  <p class="master-summary__price">3 500 ₽ · 90 минут</p>
+                </div>
+                <button class="master-summary__link" type="button">Изменить</button>
+              </aside>
+            </section>
+
+            <section class="card slots-card" aria-labelledby="slots-title">
+              <div class="card__head">
+                <div class="card__head-text">
+                  <p class="card__eyebrow">Свободное время</p>
+                  <h2 class="card__title" id="slots-date">Суббота, 17 октября</h2>
+                </div>
+                <span class="badge badge--success" id="slots-badge">Сегодня</span>
+              </div>
+
+              <p class="slots-card__hint">
+                Выберите удобное время. Занятые слоты отмечены серым — на них записаться нельзя.
+              </p>
+
+              <div id="slots-content" aria-live="polite"></div>
+
+              <div class="slots-card__note">
+                <p class="slots-card__note-text">
+                  Длительность визита — 90 минут. Если вы опаздываете больше чем на 10 минут,
+                  мастер может перенести начало процедуры.
+                </p>
+              </div>
+            </section>
+          </div>
+
+          <section class="summary-bar" aria-label="Выбранная запись" aria-live="polite">
+            <div class="summary-bar__date">
+              <p class="summary-bar__label">Ваша запись</p>
+              <p class="summary-bar__value">
+                <span class="summary-bar__day" id="summary-day">Суббота, 17 октября 2026</span>
+                <span class="summary-bar__dot" aria-hidden="true">•</span>
+                <strong class="summary-bar__time summary-bar__time--empty" id="summary-time">
+                  время не выбрано
+                </strong>
+              </p>
+            </div>
+
+            <div class="summary-bar__service">
+              <p class="summary-bar__service-name">Маникюр с покрытием</p>
+              <p class="summary-bar__service-meta">90 минут · Алина Соколова</p>
+            </div>
+
+            <p class="summary-bar__price">3 500 ₽</p>
+
+            <button
+              class="button button--primary summary-bar__button"
+              id="next-button"
+              type="button"
+              disabled
+            >
+              <span class="button__text">Далее</span>
+              <span class="button__arrow" aria-hidden="true">→</span>
+            </button>
+          </section>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container site-footer__inner">
+          <div class="site-footer__brand">
+            <a class="logo logo--footer" href="#" aria-label="Салон красоты Лотос — на главную">
+              <span class="logo__mark logo__mark--footer" aria-hidden="true">Л</span>
+              <span class="logo__text">
+                <span class="logo__name logo__name--footer">Лотос</span>
+                <span class="logo__caption logo__caption--footer">салон красоты</span>
+              </span>
+            </a>
+            <p class="site-footer__description">
+              Место, где забота о себе становится спокойным ритуалом. Мастера с медицинским
+              образованием, премиальные материалы и время только для вас.
+            </p>
+          </div>
+
+          <div class="site-footer__column">
+            <h3 class="site-footer__title">Контакты</h3>
+            <address class="site-footer__address">
+              <p class="site-footer__text">Москва, ул. Большая Дмитровка, 12</p>
+              <a class="site-footer__link" href="tel:+74951204567">+7 (495) 120-45-67</a>
+              <a class="site-footer__link" href="mailto:hello@lotos-salon.ru">hello@lotos-salon.ru</a>
+            </address>
+          </div>
+
+          <div class="site-footer__column">
+            <h3 class="site-footer__title">Часы работы</h3>
+            <p class="site-footer__text">Пн–Вс: 10:00–21:00</p>
+            <p class="site-footer__text">Онлайн-запись — круглосуточно</p>
+            <nav class="site-footer__socials" aria-label="Социальные сети">
+              <a class="site-footer__social" href="#">Telegram</a>
+              <a class="site-footer__social" href="#">WhatsApp</a>
+              <a class="site-footer__social" href="#">VK</a>
+            </nav>
+          </div>
+        </div>
+
+        <div class="container site-footer__bottom">
+          <p class="site-footer__copyright">© 2026 Салон красоты «Лотос». Все права защищены.</p>
+          <a class="site-footer__policy" href="#">Политика конфиденциальности</a>
+        </div>
+      </footer>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
